@@ -1,0 +1,117 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.game-container {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(3, 120px);
+  grid-template-rows: repeat(3, 120px);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.cell {
+  background-color: #ffffff;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.cell:hover {
+  transform: scale(1.1);
+  background-color: #ffeb3b;
+}
+
+.cell.taken {
+  pointer-events: none;
+  background-color: #4caf50;
+  color: white;
+}
+
+#status {
+  margin: 20px 0;
+  font-size: 1.8rem;
+}
+
+#reset {
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  background: #ff5722;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease;
+}
+
+#reset:hover {
+  background: #e64a19;
+}
+/* পূর্ববর্তী CSS একই থাকবে, শুধু নিচের কোড যুক্ত করুন */
+
+#settings {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+#settings-menu {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sound-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.sound-icon {
+  font-size: 1.2rem;
+}
+
+.hidden {
+  display: none;
+}
