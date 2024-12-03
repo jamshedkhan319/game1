@@ -32,7 +32,7 @@ function startGame() {
   createBoard();
   currentPlayer = "X";
   boardState = Array(9).fill(null);
-  statusText.textContent = "Player X এর পালা";
+  statusText.textContent = "Player X ";
   addEventListeners();
 }
 
@@ -83,7 +83,7 @@ function handleMove(e) {
       if (isWinDrawSoundEnabled) drawSound.play();
     } else {
       currentPlayer = currentPlayer === "X" ? "O" : "X";
-      statusText.textContent = `Player ${currentPlayer} এর পালা`;
+      statusText.textContent = `Player ${currentPlayer}`;
     }
   }
 }
